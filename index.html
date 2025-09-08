@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+	<title>학점 계산기</title>
+<style>
+	html, body {
+		height: 100%;
+		min-height: 100vh;
+		margin: 0;
+	}
+h1 { 
+	color: blueviolet; 
+	font-weight: 900;
+}
+body { 
+	font-size: 24px; 
+	font-family: 'Noto Sans', sans-serif; /* 폰트 변경 */
+	background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+	background-repeat: no-repeat;
+	padding: 20px 40px;
+}
+</style>
+</head>
+<body>
+<h1>학점 계산기</h1>
+<script>
+  // 총점 계산 함수
+  function sum(score1, score2) {
+    let total = Number(score1) + Number(score2);
+    return total;
+  }
+
+  // 입력
+  let s1 = prompt("첫 번째 과목 점수를 입력하세요 (예: 4.0)");
+  let s2 = prompt("두 번째 과목 점수를 입력하세요 (예: 3.0)");
+
+  // 학점 평균
+  let total = sum(s1, s2);
+  let avg = total / 2;
+
+  // 출력
+  document.write("총합: " + total + "<br>");
+  document.write("평균 학점: " + avg.toFixed(2));
+  document.write("<p style='font-family: \"Gamja Flower\", cursive; font-size: 28px; color: blueviolet;'><span style='background-color: lightblue;'>이번 학기도 수고 많았어!<br/>다음 학기도 파이팅이야!</p>")
+  document.write("<img src='무조껀 잘댄다.jpeg' alt='마무리 이미지' style='width:300px; margin-top:20px;'>");
+</script>
+</body>
+</html>
